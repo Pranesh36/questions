@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q&A</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        min-height: 90vh;
+        width: 60vw;
+        margin: 40px 250px;
+        background-color: #ffdee9;
+        background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+
+        display: grid;
+        border-radius: 10px;
+      }
+      .heading h1 {
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 40px;
+        text-decoration: underline;
+      }
+
+      .qes-title {
+        display: flex;
+        justify-content: space-between;
+        /* padding-bottom: 10px; */
+        border: 2px solid black;
+        padding: 20px 40px;
+        margin: 30px 20px;
+        border-radius: 5px;
+      }
+      .btns {
+        background: none;
+        border: none;
+        transition: all 0.3s ease;
+      }
+      .qes-text {
+        display: none;
+      }
+      .show-text .qes-text {
+        display: block;
+        padding: 0 50px;
+      }
+      .minus-btn {
+        display: none;
+      }
+      .show-text .minus-btn {
+        display: inline;
+      }
+      .show-text .plus-btn {
+        display: none;
+      }
+      body {
+        background: #4ca1af; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #c4e0e5,
+          #4ca1af
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #c4e0e5,
+          #4ca1af
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="header">
+      <div class="heading">
+        <h1>Program based Questions</h1>
+      </div>
+      <div class="section">
+        <article class="question">
+          <div class="qes-title">
+            <p>1. What is HTML and its uses?</p>
+
+            <button class="btns">
+              <span class="plus-btn"
+                ><i class="fa-regular fa-square-plus"></i
+              ></span>
+              <span class="minus-btn">
+                <i class="fa-regular fa-square-minus"></i>
+              </span>
+            </button>
+          </div>
+          <div class="qes-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+              vero nobis recusandae aspernatur. Consequuntur ducimus eos hic,
+              debitis reprehenderit nostrum, qui magnam perferendis distinctio
+              vel nulla at veritatis similique? Illo.
+            </p>
+          </div>
+        </article>
+        <article class="question">
+          <div class="qes-title">
+            <p>2. What are the uses of the anchor tag? And href tag ?</p>
+
+            <button class="btns">
+              <span class="plus-btn"
+                ><i class="fa-regular fa-square-plus"></i
+              ></span>
+              <span class="minus-btn">
+                <i class="fa-regular fa-square-minus"></i>
+              </span>
+            </button>
+          </div>
+          <div class="qes-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
+              dolorem architecto fugit, repudiandae qui illo expedita amet nam,
+              beatae blanditiis molestiae sit, error magnam reiciendis.
+              Reiciendis debitis adipisci omnis molestias!
+            </p>
+          </div>
+        </article>
+        <article class="question">
+          <div class="qes-title">
+            <p>3. What are the advantages of using CSS & their limitation?</p>
+
+            <button class="btns">
+              <span class="plus-btn"
+                ><i class="fa-regular fa-square-plus"></i
+              ></span>
+              <span class="minus-btn">
+                <i class="fa-regular fa-square-minus"></i>
+              </span>
+            </button>
+          </div>
+          <div class="qes-text">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              neque, blanditiis mollitia facilis, aliquid maiores voluptatum
+              quae, ex eligendi labore natus illo fugiat debitis libero culpa!
+              Ipsum voluptas quasi expedita.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script>
+      let btns = document.querySelectorAll(".btns");
+      btns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          let activeBtn = e.currentTarget.parentElement.parentElement;
+          activeBtn.classList.toggle("show-text");
+        });
+      });
+    </script>
+  </body>
+</html>
